@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-12">
+        <button class="btn btn-success">New Recipe</button>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-12">
+
+        <div class="card-deck">
+            <div class="card" *ngFor="let recipe of recipes" style="max-width: 18rem;">
+                <img [src]="recipe.imgPath" class="card-img-top" alt="Card image cap"  >
+                <div class="card-body">
+                    <h5 class="card-title"> {{recipe.name}} </h5>
+                    <p class="card-text"> {{recipe.description}} </p>
+                </div>
+            </div>
+        </div>
+
+        <app-recipe-item></app-recipe-item>
+    </div>
+</div>
